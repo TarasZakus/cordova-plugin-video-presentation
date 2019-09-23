@@ -1,0 +1,20 @@
+{
+  "name": "cordova-plugin-video-presentation",
+  "version": "0.1.0",
+  "description": "Allows to play a fullscreen video natively on iOS.",
+  "cordova": {
+    "id": "cordova-plugin-video-presentation",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "video",
+    "presentation",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Taras Zakus <taras.zakus@fullmoon.de>",
+  "license": "Apache 2.0"
+}

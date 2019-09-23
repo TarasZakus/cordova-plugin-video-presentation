@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-video-presentation" version="0.1.0">
+    <name>VideoPresentation</name>
+    <description>Allows to play a fullscreen video natively on iOS.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,video,presentation</keywords>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+
+    <js-module src="www/video-presentation.js" name="VideoPresentation">
+        <clobbers target="videoPresentation" />
+    </js-module>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="VideoPresentation">
+                <param name="ios-package" value="VideoPresentation" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/VideoPresentation.h" />
+        <source-file src="src/ios/VideoPresentation.m" />
+
+        <header-file src="src/ios/LandscapeVideo.h" />
+        <source-file src="src/ios/LandscapeVideo.m" />
+
+        <!--https://github.com/HomeControlAS/cordova-plugin-advanced-websocket.git-->
+        <header-file src="src/ios/WebSocketAdvanced.h" />
+        <source-file src="src/ios/WebSocketAdvanced.m" />
+
+        <framework src="MediaPlayer.framework" />
+        <framework src="SocketRocket" type="podspec" spec="0.5.1" />
+    </platform>
+</plugin>
